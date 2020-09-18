@@ -39,10 +39,9 @@
                   <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a>
                 </div>
               </div>
-            <?php }}
-          ?>
-
-          <p class="t-center no-margin"><a href="#" class="btn btn--blue">View All Events</a></p>
+            <?php } ?>
+            <p class="t-center no-margin"><a href="<?php echo site_url("/category/events") ?>" class="btn btn--blue">View All Events</a></p>
+          <?php } ?>
         </div>
       </div>
       <div class="full-width-split__two">
@@ -73,10 +72,9 @@
                       <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a>
                     </div>
                   </div>
-            <?php }}
-          ?>
-
-          <p class="t-center no-margin"><a href="#" class="btn btn--yellow">View All Blog Posts</a></p>
+            <?php } ?>
+            <p class="t-center no-margin"><a href="<?php echo site_url("/category/blog") ?>" class="btn btn--yellow">View All Blog Posts</a></p>
+          <?php } ?>
         </div>
       </div>
     </div>
