@@ -22,17 +22,41 @@
           <i class="fa fa-home" aria-hidden="true"></i>
           <?php echo get_the_title($parent_ID); ?>
         </a>
-        <span class="metabox__main"><?php the_title(); ?></span></p>
+        <span class="metabox__main"><?php the_title(); ?></span>
+      </p>
     </div>
 <?php } ?>
 
-  <!-- <div class="page-links">
-    <h2 class="page-links__title"><a href="#">About Us</a></h2>
+<?php
+  $child_array = get_pages( array(
+    'child-of' => get_the_ID()
+  ) );
+
+  if ($parent_ID || $child_array) { ?>
+    <div class="page-links">
+    <h2 class="page-links__title">
+      <a href="<?php echo get_the_permalink($parent_ID) ?>">
+        <?php echo get_the_title($parent_ID) ?>
+      </a>
+    </h2>
     <ul class="min-list">
-      <li class="current_page_item"><a href="#">Our History</a></li>
-      <li><a href="#">Our Goals</a></li>
+      <?php
+        if ($parent_ID) {
+          $child_of_id = $parent_ID;
+        } else {
+          $child_of_id = get_the_ID();
+        }
+        wp_list_pages(
+          array(
+            'title_li' => NULL,
+            'child_of' => $child_of_id
+          )
+        ); ?>
     </ul>
-  </div> -->
+  </div>
+  <?php }
+?>
+
 
   <div class="generic-content">
     <?php the_content(); ?>
