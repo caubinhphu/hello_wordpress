@@ -58,7 +58,6 @@
         </div>
       </div>
     </footer>
-
-    <script src="js/scripts-bundled.js"></script>
+    <?php wp_footer(  ); ?>
   </body>
 </html>
