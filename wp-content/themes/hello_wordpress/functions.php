@@ -8,3 +8,9 @@ function load_file() {
 }
 
 add_action( "wp_enqueue_scripts", "load_file");
+
+function set_up_title() {
+  add_theme_support("title-tag");
+}
+
+add_action( "after_setup_theme", "set_up_title" );
