@@ -14,3 +14,9 @@ function set_up_title() {
 }
 
 add_action( "after_setup_theme", "set_up_title" );
+
+
+function mytheme_custom_excerpt_length( $length ) {
+  return 20;
+}
+add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
