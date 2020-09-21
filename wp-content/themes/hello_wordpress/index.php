@@ -113,5 +113,5 @@
         <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]"></div>
       </div>
     </div>
-
+<?php do_shortcode('[contact-form-7 id="53" title="Contact form 1"]') ?> 
 <?php get_footer(); ?>
