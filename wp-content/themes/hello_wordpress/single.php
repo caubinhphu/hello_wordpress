@@ -17,6 +17,8 @@
 
 </div>
 
+<?php the_field('custom_field') ?>
+
 <div class="page-section page-section--white"></div>
 <?php get_comments(  ); ?>
 <?php comment_form(); ?>
