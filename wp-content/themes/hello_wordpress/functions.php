@@ -31,3 +31,4 @@ function wpbeginner_comment_text_after($arg) {
 }
 
 add_filter('comment_form_defaults', 'wpbeginner_comment_text_after');
+
