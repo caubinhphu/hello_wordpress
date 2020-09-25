@@ -14,7 +14,9 @@
   <div class="generic-content">
     <img src="<?php echo get_field('image'); ?>" alt="<?php echo get_field('name'); ?>">
   </div>
-
+  <div>
+    <?php echo get_field('describe'); ?>
+  </div>
 </div>
 
 
